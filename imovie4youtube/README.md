@@ -1,8 +1,8 @@
 # rpa-sikulix
 
 Local:
-DOUGA-iMac:test.sikuli TETSUO$ pwd
-/Users/TETSUO/test.sikuli
+DOUGA-iMac:imovie4youtube TETSUO$ pwd
+/Users/TETSUO/sikulix/imovie4youtube
 
 【導入方法】
 ① 以下のサイトを参考にする。
