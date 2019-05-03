@@ -55,18 +55,21 @@ region6=Env.getMouseLocation()
 #mouseUp()
 #wait(3)
 
-movelist = [
+movelist1 = [
         { "fileicon":"1555765603064.png" , "moveto": "1555907723681.png"},
-        { "fileicon": "1555765614663.png", "moveto": Pattern("1555765706825.png").targetOffset(8,107)}       
+]
+
+movelist2 = [       
+        { "fileicon": "1555765614663.png", "moveto": Pattern("1555765706825.png").targetOffset(8,107)},
 ]
 
 click(Pattern("1555913324335.png").targetOffset(-59,-3))
 region_base=Env.getMouseLocation()
 
 while True:
- for item in movelist:
-   m = find(item['fileicon'])
-   drag(m)
+ for item1 in movelist1:
+   m1 = find(item1['fileicon'])
+   drag(m1)
    mouseMove(region_base.offset(0,0))
    wait(1)   
    mouseMove(region_base.offset(5,15))
@@ -79,6 +82,21 @@ while True:
    mouseUp()
    wait(1)
 
+ for item2 in movelist2:
+   m2 = find(item2['fileicon'])
+   drag(m2)
+   mouseMove(region_base.offset(0,0))
+   wait(1)   
+   mouseMove(region_base.offset(5,15))
+   wait(1)
+   mouseMove(region_base.offset(20,60))
+#   mouseMove(region_base.offset(-5,-25))  
+   wait(1)
+   dropAt(region_base.offset(20,60))
+   wait(1)
+   mouseUp()
+   wait(1)
+   
 
 #t=find("/Users/TETSUO/Desktop/test-111/w.jpg")
 click("w.jpg")
